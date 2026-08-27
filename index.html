@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="p4DzmZN7qgPVlgvUNQuVfOBVukEXjsF-Sslhs03Mbyo">
+    <meta name="yandex-verification" content="f5b8b11a5819344d">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <title>Промышленный альпинизм Челябинск | АйРус — мойка окон, очистка крыш, высотные работы</title>
+    <meta name="description" content="Промышленный альпинизм в Челябинске — мойка окон и фасадов, очистка крыш от снега, герметизация швов, высотный монтаж. Работаем с 2019 года. Звоните!">
+    <meta name="keywords" content="промышленный альпинизм, высотные работы, мойка окон, очистка крыш, герметизация швов, фасадные работы, высотный монтаж, промышленные альпинисты, Челябинск">
+
+    <!-- Подключаем мягкие стили -->
+    <link rel="stylesheet" href="styles-soft.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Inter Font -->
+    <style>
+        @font-face {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 300 800;
+            font-display: swap;
+            src: url(fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format("woff2");
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        /* Stats */
+        .hero-stats { gap: 2.5rem; }
+        .stat-number {
+            display: block;
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--primary-soft);
+            letter-spacing: -0.02em;
+        }
+        .stat-label {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        /* Service Features List */
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        .service-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-medium);
+        }
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-mint);
+            font-weight: bold;
+        }
+        /* Client Card */
+        .client-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+        }
+        .client-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .client-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(107, 154, 196, 0.15), rgba(143, 184, 217, 0.06));
+            border: 2px solid var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.6rem;
+            color: var(--primary-soft);
+        }
+        .client-badge {
+            display: inline-block;
+            background: rgba(107, 154, 196, 0.1);
+            color: var(--primary-soft);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        /* Tabs */
+        .service-tabs .nav-link {
+            background: var(--bg-white);
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            transition: var(--transition-smooth);
+            text-align: left;
+        }
+        .service-tabs .nav-link:hover {
+            border-color: var(--primary-light);
+            background: rgba(107, 154, 196, 0.05);
+        }
+        .service-tabs .nav-link.active {
+            background: linear-gradient(135deg, var(--primary-soft), var(--primary-light));
+            color: white;
+            border-color: transparent;
+        }
+        /* Login Button */
+        .btn-login {
+            background: transparent;
+            border: 2px solid var(--primary-light);
+            color: var(--primary-soft);
+            border-radius: var(--radius-sm);
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            font-size: 1.1rem;
+        }
+        .btn-login:hover {
+            border-color: var(--primary-soft);
+            color: white;
+            background: var(--primary-soft);
+        }
+        /* Badge Premium */
+        .badge-premium {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(107, 154, 196, 0.12), rgba(143, 184, 217, 0.06));
+            color: var(--primary-soft);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        @media (max-width: 767px) {
+            .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+            .stat-number { font-size: 1.5rem; }
+        }
+
+
+        /* News section — same visual language as the main site */
+        #news .news-card {
+            background: var(--bg-white, #ffffff);
+            border: 1px solid rgba(107, 154, 196, 0.14);
+            border-radius: var(--radius-lg, 24px);
+            padding: 2rem;
+            height: 100%;
+            box-shadow: var(--shadow-md, 0 12px 30px rgba(35, 64, 92, 0.08));
+            transition: var(--transition-smooth, all 0.3s ease);
+            display: flex;
+            flex-direction: column;
+        }
+        #news .news-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-light, #8fb8d9);
+            box-shadow: var(--shadow-lg, 0 18px 40px rgba(35, 64, 92, 0.12));
+        }
+        #news .news-card h5 {
+            color: var(--text-dark, #25313c);
+            line-height: 1.35;
+        }
+        #news .news-card p {
+            color: var(--text-medium, #667788);
+            line-height: 1.7;
+        }
+        #news .news-date {
+            display: inline-flex;
+            align-self: flex-start;
+            padding: 5px 11px;
+            border-radius: 50px;
+            background: rgba(107, 154, 196, 0.10);
+            color: var(--primary-soft, #6b9ac4);
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        #news .news-link {
+            margin-top: auto;
+            padding-top: 0.65rem;
+            color: var(--primary-soft, #6b9ac4);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth, all 0.3s ease);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        #news .news-link:hover {
+            color: var(--primary-dark, #4f7fa8);
+            gap: 0.6rem;
+        }
+        @media (max-width: 767px) {
+            #news .news-card { padding: 1.5rem; }
+        }
+
+
+        /* ============================================================
+           2026 FULL DARK REDESIGN — black / white / motion
+           ============================================================ */
+        :root {
+            --ink: #050505;
+            --ink-2: #0a0a0a;
+            --ink-3: #101010;
+            --surface: rgba(255,255,255,0.055);
+            --surface-strong: rgba(255,255,255,0.085);
+            --line: rgba(255,255,255,0.12);
+            --line-strong: rgba(255,255,255,0.24);
+            --white: #ffffff;
+            --white-soft: #f1f1f1;
+            --muted: #a9a9a9;
+            --muted-2: #777777;
+            --radius-sm: 14px;
+            --radius-md: 22px;
+            --radius-lg: 30px;
+            --ease: cubic-bezier(.22,1,.36,1);
+            --shadow-black: 0 24px 80px rgba(0,0,0,.45);
+        }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 12% 10%, rgba(255,255,255,.055), transparent 30%),
+                radial-gradient(circle at 88% 22%, rgba(255,255,255,.035), transparent 28%),
+                #050505 !important;
+            color: var(--white-soft) !important;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            z-index: -1;
+            width: 38vw;
+            height: 38vw;
+            min-width: 360px;
+            min-height: 360px;
+            border-radius: 50%;
+            filter: blur(110px);
+            opacity: .14;
+            pointer-events: none;
+            background: #fff;
+            will-change: transform;
+        }
+        body::before { top: -16vw; left: -18vw; animation: ambientFloatA 18s ease-in-out infinite alternate; }
+        body::after { right: -20vw; bottom: -18vw; opacity: .08; animation: ambientFloatB 22s ease-in-out infinite alternate; }
+
+        ::selection { background: #fff; color: #000; }
+        a { color: #fff; }
+        p { color: var(--muted); }
+        .text-muted, .service-tabs .text-muted { color: #858585 !important; }
+
+        /* NAV */
+        #mainNav {
+            background: rgba(5,5,5,.68) !important;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            backdrop-filter: blur(18px) saturate(130%);
+            -webkit-backdrop-filter: blur(18px) saturate(130%);
+            transition: background .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease), transform .35s var(--ease);
+        }
+        #mainNav.nav-scrolled {
+            background: rgba(5,5,5,.92) !important;
+            border-color: rgba(255,255,255,.13);
+            box-shadow: 0 14px 45px rgba(0,0,0,.32);
+        }
+        #mainNav .navbar-brand { color: #fff !important; letter-spacing: -.04em; transition: transform .35s var(--ease); }
+        #mainNav .navbar-brand:hover { transform: scale(1.045); }
+        #mainNav .nav-link {
+            color: rgba(255,255,255,.68) !important;
+            font-weight: 600;
+            position: relative;
+            padding-left: .9rem !important;
+            padding-right: .9rem !important;
+            transition: color .3s var(--ease), transform .3s var(--ease);
+        }
+        #mainNav .nav-link::after {
+            content: '';
+            position: absolute;
+            left: .9rem; right: .9rem; bottom: 3px;
+            height: 1px;
+            transform: scaleX(0);
+            transform-origin: left;
+            background: #fff;
+            transition: transform .35s var(--ease);
+        }
+        #mainNav .nav-link:hover,
+        #mainNav .nav-link.active { color: #fff !important; transform: translateY(-1px); }
+        #mainNav .nav-link:hover::after,
+        #mainNav .nav-link.active::after { transform: scaleX(1); }
+        .navbar-toggler { border: 1px solid rgba(255,255,255,.2) !important; border-radius: 14px !important; }
+        .navbar-toggler:focus { box-shadow: 0 0 0 3px rgba(255,255,255,.08) !important; }
+        .navbar-toggler-icon { filter: invert(1) grayscale(1) brightness(2); }
+
+        /* SECTIONS */
+        .hero-section,
+        .section-gray,
+        .section-light,
+        .section-accent,
+        #news,
+        footer {
+            background: transparent !important;
+            color: var(--white-soft) !important;
+            position: relative;
+        }
+        .hero-section { min-height: 100vh; display: flex; align-items: center; padding-top: 84px; overflow: hidden; }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,.95), transparent 92%);
+            opacity: .55;
+            animation: gridDrift 22s linear infinite;
+            pointer-events: none;
+        }
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            width: 520px; height: 520px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 50%;
+            right: -180px; top: 16%;
+            box-shadow: 0 0 0 80px rgba(255,255,255,.015), 0 0 0 160px rgba(255,255,255,.01);
+            animation: slowSpin 28s linear infinite;
+            pointer-events: none;
+        }
+        #services, #clients, #news, #contact { padding: 7rem 0 !important; }
+        #services::before, #news::before {
+            content: '';
+            position: absolute;
+            left: 5%; right: 5%; top: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+        }
+
+        /* TYPE */
+        .hero-title {
+            color: #fff !important;
+            font-size: clamp(3.2rem, 7vw, 6.7rem) !important;
+            line-height: .92 !important;
+            font-weight: 800 !important;
+            letter-spacing: -.065em !important;
+            max-width: 900px;
+            text-wrap: balance;
+        }
+        .hero-title span { color: rgba(255,255,255,.38) !important; }
+        .hero-subtitle {
+            color: #a6a6a6 !important;
+            font-size: clamp(1rem, 1.4vw, 1.16rem) !important;
+            line-height: 1.75 !important;
+            max-width: 640px;
+        }
+        .section-title {
+            color: #fff !important;
+            font-size: clamp(2.3rem, 4.5vw, 4.4rem) !important;
+            font-weight: 800 !important;
+            letter-spacing: -.055em !important;
+            line-height: 1.02 !important;
+        }
+        .section-subtitle { color: #888 !important; font-size: 1.02rem; }
+        h1,h2,h3,h4,h5,h6 { color: #fff; }
+
+        /* BADGES */
+        .badge-premium,
+        .client-badge,
+        #news .news-date {
+            background: rgba(255,255,255,.06) !important;
+            color: rgba(255,255,255,.82) !important;
+            border: 1px solid rgba(255,255,255,.13) !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+        .badge-premium::after {
+            content: '';
+            position: absolute;
+            top: -40%; bottom: -40%; width: 36px;
+            left: -60px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent);
+            transform: skewX(-20deg);
+            animation: badgeSheen 5.5s ease-in-out infinite;
+        }
+
+        /* BUTTONS */
+        .btn,
+        .btn-primary,
+        .btn-outline-primary,
+        .btn-login {
+            --bs-btn-color: #050505;
+            --bs-btn-bg: #fff;
+            --bs-btn-border-color: #fff;
+            --bs-btn-hover-color: #050505;
+            --bs-btn-hover-bg: #fff;
+            --bs-btn-hover-border-color: #fff;
+            background: #fff !important;
+            color: #050505 !important;
+            border: 1px solid rgba(255,255,255,.95) !important;
+            border-radius: 16px !important;
+            font-weight: 700 !important;
+            letter-spacing: -.01em;
+            box-shadow: 0 10px 28px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.8);
+            transition: transform .32s var(--ease), box-shadow .32s var(--ease), background .32s var(--ease), color .32s var(--ease) !important;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .btn::before,
+        .btn-primary::before,
+        .btn-outline-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(110deg, transparent 25%, rgba(0,0,0,.08) 50%, transparent 75%);
+            transform: translateX(-120%);
+            transition: transform .6s var(--ease);
+        }
+        .btn:hover,
+        .btn-primary:hover,
+        .btn-outline-primary:hover,
+        .btn-login:hover {
+            background: #fff !important;
+            color: #000 !important;
+            transform: translateY(-3px) scale(1.015);
+            box-shadow: 0 18px 42px rgba(0,0,0,.36), 0 0 0 4px rgba(255,255,255,.06);
+        }
+        .btn:hover::before { transform: translateX(120%); }
+        .btn:active { transform: translateY(-1px) scale(.985) !important; }
+        .btn-lg { padding: .85rem 1.35rem !important; }
+        .btn-login { width: 44px; height: 44px; padding: 0 !important; border-radius: 14px !important; }
+
+        /* STATS */
+        .hero-stats { gap: 1.3rem !important; }
+        .hero-stats > div {
+            min-width: 125px;
+            padding: 1rem 1.1rem;
+            background: rgba(255,255,255,.035);
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            transition: transform .35s var(--ease), background .35s var(--ease), border-color .35s var(--ease);
+        }
+        .hero-stats > div:hover { transform: translateY(-5px); background: rgba(255,255,255,.065); border-color: rgba(255,255,255,.18); }
+        .stat-number { color: #fff !important; font-size: 2rem !important; }
+        .stat-label { color: #777 !important; }
+
+        /* SERVICE TABS */
+        .service-tabs .nav-link {
+            background: rgba(255,255,255,.035) !important;
+            color: #fff !important;
+            border: 1px solid rgba(255,255,255,.09) !important;
+            border-radius: 18px !important;
+            padding: 1.05rem !important;
+            margin-bottom: .65rem !important;
+            box-shadow: none !important;
+            transition: transform .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease) !important;
+        }
+        .service-tabs .nav-link:hover { transform: translateX(6px); background: rgba(255,255,255,.065) !important; border-color: rgba(255,255,255,.18) !important; }
+        .service-tabs .nav-link.active {
+            background: #fff !important;
+            color: #050505 !important;
+            border-color: #fff !important;
+            transform: translateX(8px);
+            box-shadow: 0 16px 35px rgba(0,0,0,.25) !important;
+        }
+        .service-tabs .nav-link.active .text-muted { color: #5e5e5e !important; }
+
+        /* CARDS */
+        .service-card,
+        .client-card,
+        #news .news-card,
+        #contact .card,
+        .modal-content {
+            background: rgba(255,255,255,.045) !important;
+            color: var(--white-soft) !important;
+            border: 1px solid rgba(255,255,255,.105) !important;
+            border-radius: var(--radius-lg) !important;
+            box-shadow: var(--shadow-black), inset 0 1px 0 rgba(255,255,255,.045) !important;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        .service-card { padding: clamp(1.5rem, 3vw, 3rem) !important; overflow: hidden; position: relative; }
+        .service-card::after {
+            content: '';
+            position: absolute;
+            width: 240px; height: 240px;
+            border-radius: 50%;
+            right: -80px; top: -100px;
+            background: rgba(255,255,255,.055);
+            filter: blur(20px);
+            pointer-events: none;
+            animation: cardGlow 7s ease-in-out infinite alternate;
+        }
+        .service-card p, .client-card p, #news .news-card p { color: #8f8f8f !important; }
+        .service-card a:not(.btn) { color: #fff !important; text-decoration-color: rgba(255,255,255,.35); }
+        .service-features li { color: #b0b0b0 !important; }
+        .service-features li::before { color: #fff !important; }
+        .service-card i[style*="font-size: 8rem"] {
+            color: #fff !important;
+            opacity: .08 !important;
+            filter: drop-shadow(0 0 30px rgba(255,255,255,.1));
+            animation: iconFloat 4.8s ease-in-out infinite;
+        }
+
+        .client-card { padding: 2rem !important; transition: transform .4s var(--ease), background .4s var(--ease), border-color .4s var(--ease) !important; }
+        .client-card:hover { transform: translateY(-7px) scale(1.008) !important; background: rgba(255,255,255,.065) !important; border-color: rgba(255,255,255,.18) !important; }
+        .client-avatar,
+        .feature-icon {
+            background: #fff !important;
+            color: #050505 !important;
+            border: 1px solid #fff !important;
+            box-shadow: 0 12px 30px rgba(0,0,0,.25);
+            transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+        }
+        .client-card:hover .client-avatar { transform: rotate(-7deg) scale(1.07); box-shadow: 0 18px 38px rgba(0,0,0,.4); }
+
+        /* CAROUSEL */
+        .carousel-control-prev,
+        .carousel-control-next {
+            background: #fff !important;
+            border: 1px solid #fff !important;
+            box-shadow: 0 12px 30px rgba(0,0,0,.3);
+            transition: transform .3s var(--ease), box-shadow .3s var(--ease) !important;
+        }
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover { transform: translateY(-50%) scale(1.08) !important; box-shadow: 0 18px 36px rgba(0,0,0,.42); }
+        .carousel-control-prev i,
+        .carousel-control-next i { color: #000 !important; }
+        .carousel-dots button { background: rgba(255,255,255,.14) !important; transition: width .35s var(--ease), background .35s var(--ease) !important; }
+        .carousel-dots button.active { background: #fff !important; width: 56px !important; }
+
+        /* NEWS */
+        #news .news-card { padding: 2rem !important; position: relative; overflow: hidden; }
+        #news .news-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,.055), transparent 42%);
+            opacity: 0;
+            transition: opacity .4s var(--ease);
+            pointer-events: none;
+        }
+        #news .news-card:hover { transform: translateY(-9px) !important; background: rgba(255,255,255,.07) !important; border-color: rgba(255,255,255,.2) !important; }
+        #news .news-card:hover::before { opacity: 1; }
+        #news .news-card h5 { color: #fff !important; }
+        #news .news-link { color: #fff !important; }
+        #news .news-link svg { transition: transform .35s var(--ease); }
+        #news .news-card:hover .news-link svg { transform: translateX(6px); }
+
+        /* CONTACT / FORM */
+        #contact { overflow: hidden; }
+        #contact::after {
+            content: '';
+            position: absolute;
+            width: 480px; height: 480px;
+            left: -240px; bottom: -280px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,.09);
+            box-shadow: 0 0 0 80px rgba(255,255,255,.012), 0 0 0 160px rgba(255,255,255,.008);
+            animation: slowSpinReverse 34s linear infinite;
+            pointer-events: none;
+        }
+        #contact .card { padding: 2rem !important; }
+
+        #contact .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        #contact .contact-icon-box {
+            width: 58px;
+            height: 58px;
+            min-width: 58px;
+            border-radius: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(236,236,236,0.95));
+            color: #050505;
+            border: 1px solid rgba(255,255,255,0.92);
+            box-shadow: 0 14px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.92);
+            transition: transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease);
+        }
+        #contact .contact-icon-box i {
+            font-size: 1.18rem;
+            line-height: 1;
+        }
+        #contact .contact-method:hover .contact-icon-box {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 18px 38px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.95);
+            background: #fff;
+        }
+        #contact .contact-meta {
+            display: flex;
+            flex-direction: column;
+            gap: .15rem;
+        }
+        #contact .contact-label {
+            font-size: .92rem;
+            color: rgba(255,255,255,.62);
+            line-height: 1.2;
+        }
+        #contact .contact-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: clamp(1.1rem, 2vw, 1.9rem);
+            letter-spacing: -0.02em;
+            transition: opacity .3s var(--ease), transform .3s var(--ease);
+            word-break: break-word;
+        }
+        #contact .contact-link:hover {
+            opacity: .82;
+        }
+        .form-control,
+        .form-select {
+            background: rgba(255,255,255,.045) !important;
+            border: 1px solid rgba(255,255,255,.12) !important;
+            color: #fff !important;
+            border-radius: 15px !important;
+            min-height: 48px;
+            transition: border-color .3s var(--ease), background .3s var(--ease), box-shadow .3s var(--ease), transform .3s var(--ease) !important;
+        }
+        .form-control::placeholder { color: #676767 !important; }
+        .form-control:focus,
+        .form-select:focus {
+            background: rgba(255,255,255,.07) !important;
+            border-color: rgba(255,255,255,.5) !important;
+            box-shadow: 0 0 0 4px rgba(255,255,255,.055) !important;
+            transform: translateY(-1px);
+        }
+        .form-select option { background: #111; color: #fff; }
+        .form-label { color: #999 !important; }
+        .form-check-input { background-color: #111 !important; border-color: #555 !important; }
+        .form-check-input:checked { background-color: #fff !important; border-color: #fff !important; }
+        .form-check-input:checked[type=checkbox] { filter: grayscale(1); }
+        .modal-backdrop.show { opacity: .82 !important; }
+        .modal-header { border-bottom-color: rgba(255,255,255,.08) !important; }
+        .btn-close { filter: invert(1) grayscale(1) brightness(2); opacity: .8; }
+
+        /* COOKIE */
+        .cookie-banner {
+            background: rgba(12,12,12,.94) !important;
+            border: 1px solid rgba(255,255,255,.12) !important;
+            color: #bdbdbd !important;
+            backdrop-filter: blur(18px);
+            box-shadow: 0 18px 50px rgba(0,0,0,.45) !important;
+        }
+        .cookie-banner a { color: #fff !important; }
+
+        /* FOOTER */
+        footer {
+            padding: 4rem 0 2rem !important;
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+        footer a { color: #8c8c8c !important; text-decoration: none !important; transition: color .3s ease, transform .3s ease; display: inline-block; }
+        footer a:hover { color: #fff !important; transform: translateX(3px); }
+        .footer-title { color: #fff !important; }
+
+        /* REVEAL / MICRO-MOTION */
+        .motion-reveal {
+            opacity: 0;
+            transform: translateY(28px) scale(.985);
+            filter: blur(4px);
+            transition: opacity .85s var(--ease), transform .85s var(--ease), filter .85s var(--ease);
+            transition-delay: var(--delay, 0ms);
+        }
+        .motion-reveal.is-visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        .hero-section .col-lg-6:first-child > * { animation: heroRise .85s var(--ease) backwards; }
+        .hero-section .col-lg-6:first-child > *:nth-child(1) { animation-delay: .08s; }
+        .hero-section .col-lg-6:first-child > *:nth-child(2) { animation-delay: .16s; }
+        .hero-section .col-lg-6:first-child > *:nth-child(3) { animation-delay: .24s; }
+        .hero-section .col-lg-6:first-child > *:nth-child(4) { animation-delay: .32s; }
+        .hero-section .col-lg-6:first-child > *:nth-child(5) { animation-delay: .40s; }
+        .hero-section .fa-mountain {
+            color: #fff !important;
+            opacity: .055 !important;
+            animation: mountainFloat 6s ease-in-out infinite !important;
+            filter: drop-shadow(0 0 60px rgba(255,255,255,.08));
+        }
+
+        @keyframes heroRise { from { opacity: 0; transform: translateY(28px); filter: blur(5px); } to { opacity: 1; transform: none; filter: blur(0); } }
+        @keyframes ambientFloatA { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(16vw,12vh,0) scale(1.12); } }
+        @keyframes ambientFloatB { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(-14vw,-8vh,0) scale(1.08); } }
+        @keyframes gridDrift { from { background-position: 0 0, 0 0; } to { background-position: 64px 64px, 64px 64px; } }
+        @keyframes slowSpin { to { transform: rotate(360deg); } }
+        @keyframes slowSpinReverse { to { transform: rotate(-360deg); } }
+        @keyframes badgeSheen { 0%,70% { left: -60px; } 100% { left: calc(100% + 60px); } }
+        @keyframes iconFloat { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+        @keyframes cardGlow { from { transform: translate3d(0,0,0) scale(1); opacity: .6; } to { transform: translate3d(-30px,35px,0) scale(1.15); opacity: 1; } }
+        @keyframes mountainFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-18px) scale(1.025); } }
+
+        @media (max-width: 991px) {
+            #mainNav .navbar-collapse {
+                margin-top: .75rem;
+                padding: 1rem;
+                background: rgba(8,8,8,.96);
+                border: 1px solid rgba(255,255,255,.1);
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,.35);
+            }
+            .hero-section { min-height: auto; padding-top: 120px; padding-bottom: 5rem; }
+            .service-tabs .nav-link.active { transform: none; }
+            .service-tabs .nav-link:hover { transform: translateY(-2px); }
+            .carousel-control-prev { left: 0 !important; }
+            .carousel-control-next { right: 0 !important; }
+        }
+        @media (max-width: 767px) {
+            #services, #clients, #news, #contact { padding: 4.5rem 0 !important; }
+            .hero-title { font-size: clamp(2.8rem, 14vw, 4.6rem) !important; }
+            .hero-stats > div { flex: 1 1 100px; min-width: 0; }
+            .service-card, #news .news-card, .client-card, #contact .card { border-radius: 22px !important; }
+            .btn { border-radius: 14px !important; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+            .motion-reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="z-index:10000;pointer-events:auto;">
+        <div class="cookie-text">
+            🍪 Мы используем файлы cookie для улучшения работы сайта. Продолжая, вы соглашаетесь с
+            <a href="./privacy.html" target="_blank">политикой конфиденциальности</a>.
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="acceptCookies()" style="cursor:pointer;position:relative;z-index:10000;pointer-events:auto;">Принять</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span style="font-weight: 800;">Ай</span><span style="font-weight: 300; opacity: 0.6;">Рус</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Наши услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-login" href="https://admin.climber174.ru">
+                            <span style="font-size:18px;">👤</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container position-relative">
+            <div class="row align-items-center" style="min-height: 80vh;">
+                <div class="col-lg-6 py-6">
+                    <span class="badge-premium mb-3">Промышленный альпинизм в Челябинске</span>
+                    <h1 class="hero-title">Высотные работы<br><span>в Челябинске</span></h1>
+                    <p class="hero-subtitle">Профессиональные промышленные альпинисты. Мойка окон и фасадов, очистка крыш от снега, герметизация швов, высотный монтаж. Безопасность, качество, доступные цены.</p>
+                    <div class="d-flex gap-3 mt-4 flex-wrap">
+                        <a href="#services" class="btn btn-primary btn-lg">
+                            Наши услуги <i class="fas fa-arrow-down ms-2"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline-primary btn-lg">
+                            Связаться
+                        </a>
+                    </div>
+                    <div class="hero-stats mt-5 d-flex gap-5">
+                        <div>
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Выполненных заказов</span>
+                        </div>
+                        <div>
+                            <span class="stat-number">ЖК</span>
+                            <span class="stat-label">Крупные клиенты</span>
+                        </div>
+                        <div>
+                            <span class="stat-number">5 лет</span>
+                            <span class="stat-label">На рынке</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center py-5 d-none d-lg-block">
+                    <div class="text-center" style="animation: fadeInScale 0.8s ease-out 0.4s backwards;">
+                        <i class="fas fa-mountain" style="font-size: 12rem; opacity: 0.08; color: var(--primary-soft);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-gray" id="services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-premium mb-3">Что мы делаем</span>
+                <h2 class="section-title">Услуги промышленного альпинизма в Челябинске</h2>
+                <p class="section-subtitle">Мойка окон, очистка крыш, герметизация швов и высотный монтаж</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Tabs Navigation -->
+                <div class="col-lg-3">
+                    <div class="nav flex-lg-column nav-pills service-tabs" role="tablist">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-cleaning" role="tab">
+                            <i class="fas fa-spray-can me-2"></i>
+                            <span>
+                                <strong>Мойка окон и фасадов</strong>
+                                <small class="d-block text-muted">Для квартир и бизнес-центров</small>
+                            </span>
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-roof" role="tab">
+                            <i class="fas fa-snowflake me-2"></i>
+                            <span>
+                                <strong>Очистка крыш от снега</strong>
+                                <small class="d-block text-muted">Безопасная работа на любой кровле</small>
+                            </span>
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-install" role="tab">
+                            <i class="fas fa-tools me-2"></i>
+                            <span>
+                                <strong>Монтажные работы</strong>
+                                <small class="d-block text-muted">Установка оборудования на высоте</small>
+                            </span>
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-facade" role="tab">
+                            <i class="fas fa-building me-2"></i>
+                            <span>
+                                <strong>Фасадные работы</strong>
+                                <small class="d-block text-muted">Герметизация и ремонт фасадов</small>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="col-lg-9">
+                    <div class="tab-content">
+                        <!-- Мойка окон -->
+                        <div class="tab-pane fade show active" id="tab-cleaning" role="tabpanel">
+                            <div class="service-card">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-lg-6">
+                                        <h3 class="fw-bold mb-3">Мойка окон и фасадов в Челябинске</h3>
+                                        <p>Профессиональная мойка окон, мытьё витрин и фасадов зданий любой этажности. Промышленные альпинисты выполнят мойку окон на высоте быстро и безопасно — от квартир до бизнес-центров.</p>
+                                        <p>Цена от 150 руб/м² — доступная мойка окон в Челябинске с гарантией качества. Запишитесь на <a href="./cleaning/balcony">коллективную мойку</a> вместе с соседями!</p>
+                                        <ul class="service-features">
+                                            <li>Мытьё окон любой этажности</li>
+                                            <li>Очистка витрин и фасадов</li>
+                                            <li>Удаление загрязнений любой сложности</li>
+                                            <li>Работа с профессиональным оборудованием</li>
+                                        </ul>
+                                        <div class="d-flex gap-2 mt-3 flex-wrap">
+                                            <a href="./cleaning/" class="btn btn-primary">
+                                                <i class="fas fa-info-circle me-2"></i>Подробнее
+                                            </a>
+                                            <button class="btn btn-outline-primary" onclick="openForm('Мойка окон и фасадов')">
+                                                <i class="fas fa-edit me-2"></i>Записаться
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="text-center">
+                                            <i class="fas fa-window-maximize" style="font-size: 8rem; opacity: 0.1; color: var(--primary-soft);"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Очистка крыш -->
+                        <div class="tab-pane fade" id="tab-roof" role="tabpanel">
+                            <div class="service-card">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-lg-6">
+                                        <h3 class="fw-bold mb-3">Очистка крыш от снега и наледи</h3>
+                                        <p>Уборка снега с крыш, очистка кровли от наледи и сосулек в Челябинске. Промышленные альпинисты выполнят сброс снега с крыши любой формы и из любого материала — безопасно, с применением страховочного снаряжения.</p>
+                                        <p>Срочная очистка крыш от снега — выезд в день обращения. Работаем с кровлями любой сложности: скатные, плоские, фальцевые.</p>
+                                        <ul class="service-features">
+                                            <li>Удаление снега и наледи</li>
+                                            <li>Очистка водостоков и желобов</li>
+                                            <li>Удаление сосулек</li>
+                                            <li>Круглосуточная работа</li>
+                                        </ul>
+                                        <div class="d-flex gap-2 mt-3 flex-wrap">
+                                            <a href="./roof/" class="btn btn-primary">
+                                                <i class="fas fa-info-circle me-2"></i>Подробнее
+                                            </a>
+                                            <button class="btn btn-outline-primary" onclick="openForm('Очистка крыш от снега')">
+                                                <i class="fas fa-edit me-2"></i>Записаться
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="text-center">
+                                            <i class="fas fa-snowflake" style="font-size: 8rem; opacity: 0.1; color: var(--accent-coral);"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Монтажные работы -->
+                        <div class="tab-pane fade" id="tab-install" role="tabpanel">
+                            <div class="service-card">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-lg-6">
+                                        <h3 class="fw-bold mb-3">Высотные монтажные работы</h3>
+                                        <p>Высотный монтаж в Челябинске: установка систем видеонаблюдения, монтаж кондиционеров и антенн, монтаж баннеров и рекламных конструкций, установка декораций и освещения на высоте. Промышленные альпинисты выполнят любые монтажные работы на высоте.</p>
+                                        <p>Перечень услуг по высотному монтажу не ограничен — звоните, обсудим задачу!</p>
+                                        <ul class="service-features">
+                                            <li>Монтаж кондиционеров</li>
+                                            <li>Установка антенн и камер</li>
+                                            <li>Монтаж рекламных конструкций</li>
+                                            <li>Установка освещения</li>
+                                        </ul>
+                                        <div class="d-flex gap-2 mt-3 flex-wrap">
+                                            <a href="./installation/" class="btn btn-primary">
+                                                <i class="fas fa-info-circle me-2"></i>Подробнее
+                                            </a>
+                                            <button class="btn btn-outline-primary" onclick="openForm('Монтажные работы')">
+                                                <i class="fas fa-edit me-2"></i>Записаться
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="text-center">
+                                            <i class="fas fa-tools" style="font-size: 8rem; opacity: 0.1; color: var(--accent-mint);"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Фасадные работы -->
+                        <div class="tab-pane fade" id="tab-facade" role="tabpanel">
+                            <div class="service-card">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-lg-6">
+                                        <h3 class="fw-bold mb-3">Фасадные работы и герметизация швов</h3>
+                                        <p>Герметизация межпанельных швов, ремонт и утепление фасадов в Челябинске. Технология «тёплый шов» — эффективная заделка швов от протечек, сквозняков и плесени. Промышленные альпинисты выполнят герметизацию фасада на любой высоте.</p>
+                                        <p>Также проводим другие виды фасадных работ: ремонт фасадов, утепление, покраска.</p>
+                                        <ul class="service-features">
+                                            <li>Герметизация межпанельных швов</li>
+                                            <li>Устранение протечек</li>
+                                            <li>Утепление фасадов</li>
+                                            <li>Покраска фасадов</li>
+                                        </ul>
+                                        <div class="d-flex gap-2 mt-3 flex-wrap">
+                                            <a href="./facade_works/" class="btn btn-primary">
+                                                <i class="fas fa-info-circle me-2"></i>Подробнее
+                                            </a>
+                                            <button class="btn btn-outline-primary" onclick="openForm('Фасадные работы')">
+                                                <i class="fas fa-edit me-2"></i>Записаться
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="text-center">
+                                            <i class="fas fa-building" style="font-size: 8rem; opacity: 0.1; color: var(--accent-lavender);"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="section-light" id="clients">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-premium mb-3">Нам доверяют</span>
+                <h2 class="section-title">Наши клиенты</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div id="clientsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="client-card">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+                                        <div class="client-avatar">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div class="text-center text-md-start">
+                                            <h4 class="fw-bold mb-1">ЖК «Территория»</h4>
+                                            <span class="client-badge">Мойка окон и балконов</span>
+                                            <p class="mt-2 mb-0 text-muted">Послестроительная мойка окон и балконов. Выполнено за апрель-май 2022 года более 100 заказов!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="client-card">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+                                        <div class="client-avatar">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div class="text-center text-md-start">
+                                            <h4 class="fw-bold mb-1">ЖК «EvoPark»</h4>
+                                            <span class="client-badge">Мойка окон и балконов</span>
+                                            <p class="mt-2 mb-0 text-muted">Послестроительная мойка окон и балконов. Выполнено за май-июнь более 100 заказов!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="client-card">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+                                        <div class="client-avatar">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div class="text-center text-md-start">
+                                            <h4 class="fw-bold mb-1">ЖК «Ньютон»</h4>
+                                            <span class="client-badge">Мойка окон и балконов</span>
+                                            <p class="mt-2 mb-0 text-muted">Сезонная мойка окон и балконов. Выполнено за май-июнь более 200 заказов.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="client-card">
+                                    <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+                                        <div class="client-avatar">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div class="text-center text-md-start">
+                                            <h4 class="fw-bold mb-1">ЖК «Манхэттен»</h4>
+                                            <span class="client-badge">Мойка окон и балконов</span>
+                                            <p class="mt-2 mb-0 text-muted">Сезонная и послестроительная мойка. Выполнено за июнь-июль более 100 заказов.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#clientsCarousel" data-bs-slide="prev" style="width: 50px; height: 50px; background: var(--primary-soft); border-radius: 50%; opacity: 1; top: 50%; transform: translateY(-50%); left: -25px;">
+                            <i class="fas fa-chevron-left" style="color: white; font-size: 1.2rem;"></i>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#clientsCarousel" data-bs-slide="next" style="width: 50px; height: 50px; background: var(--primary-soft); border-radius: 50%; opacity: 1; top: 50%; transform: translateY(-50%); right: -25px;">
+                            <i class="fas fa-chevron-right" style="color: white; font-size: 1.2rem;"></i>
+                        </button>
+
+                        <div class="carousel-dots d-flex justify-content-center gap-2 mt-4">
+                            <button type="button" class="active" data-bs-target="#clientsCarousel" data-bs-slide-to="0" style="width: 36px; height: 3px; border-radius: 2px; border: none; background: var(--primary-light);"></button>
+                            <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="1" style="width: 36px; height: 3px; border-radius: 2px; border: none; background: var(--bg-soft-gray);"></button>
+                            <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="2" style="width: 36px; height: 3px; border-radius: 2px; border: none; background: var(--bg-soft-gray);"></button>
+                            <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="3" style="width: 36px; height: 3px; border-radius: 2px; border: none; background: var(--bg-soft-gray);"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWS ==================== -->
+    <section id="news" class="section-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-premium mb-3">Будьте в курсе</span>
+                <h2 class="section-title">Новости</h2>
+                <p class="section-subtitle">Последние новости и обновления нашей компании</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="news-card">
+                        <span class="news-date">19 марта 2023 г.</span>
+                        <h5 class="fw-bold mt-2 mb-3">Мойка балконов — весна 2023</h5>
+                        <p class="opacity-75 small">Открыт коллективный приём заявок на мойку балконов и окон. План работ: с 01.04 по 15.05. Цена: от 150 руб/м².</p>
+                        <a href="./news/6/" class="news-link">
+                            Читать <svg style="vertical-align:-.125em" class="ms-1" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="news-card">
+                        <span class="news-date">12 марта 2023 г.</span>
+                        <h5 class="fw-bold mt-2 mb-3">Подсветка здания в Новом Уренгое</h5>
+                        <p class="opacity-75 small">Завод Консолей подготовил проект дизайна административного здания Роснефть, а нам доверили монтажные работы.</p>
+                        <a href="./news/5/" class="news-link">
+                            Читать <svg style="vertical-align:-.125em" class="ms-1" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="news-card">
+                        <span class="news-date">10 сентября 2022 г.</span>
+                        <h5 class="fw-bold mt-2 mb-3">Межпанельные швы</h5>
+                        <p class="opacity-75 small">Технология «тёплый шов» — самое эффективное решение при ремонте межпанельных швов.</p>
+                        <a href="./news/3/" class="news-link">
+                            Читать <svg style="vertical-align:-.125em" class="ms-1" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#home" class="btn btn-outline-primary btn-lg" title="Вернуться в главное меню">
+                    Все новости <svg style="vertical-align:-.125em" class="ms-2" width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-accent" id="contact">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-white">
+                    <h2 class="section-title text-white mb-4">Наши контакты</h2>
+                    <p class="mb-4" style="opacity: 0.9;">
+                        Свяжитесь с нами любым удобным способом — ответим быстро и поможем подобрать нужную услугу.
+                    </p>
+                    <div class="contact-method">
+                        <div class="contact-icon-box" aria-hidden="true">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-meta">
+                            <div class="contact-label">Телефон</div>
+                            <a href="tel:+79514350000" class="contact-link">+7 951 435-00-00</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon-box" aria-hidden="true">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-meta">
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:info@airus-ural.ru" class="contact-link">info@airus-ural.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Запись на услугу</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm" onsubmit="submitBooking(event)">
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Выбранная услуга</label>
+                            <input type="text" id="bookingService" class="form-control" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Ваше имя</label>
+                            <input type="text" id="nameInput" class="form-control" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Телефон</label>
+                            <input type="tel" id="phoneInput" class="form-control" placeholder="+7 (900) 000-00-00" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Жилой комплекс</label>
+                            <select id="zhkSelect" class="form-select form-control">
+                                <option value="">Выберите ЖК...</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Улица</label>
+                            <input type="text" id="streetInput" class="form-control" placeholder="Начните вводить улицу..." autocomplete="off">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <label class="form-label small text-muted">Дом</label>
+                                <input type="text" id="houseInput" class="form-control" placeholder="42">
+                            </div>
+                            <div class="col-4">
+                                <label class="form-label small text-muted">Подъезд</label>
+                                <input type="text" id="entranceInput" class="form-control" placeholder="1">
+                            </div>
+                            <div class="col-4">
+                                <label class="form-label small text-muted">Квартира</label>
+                                <input type="text" id="flatInput" class="form-control" placeholder="15">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Комментарий</label>
+                            <textarea id="commentInput" class="form-control" rows="2" placeholder="Дополнительная информация"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="consentCheck" required>
+                            <label class="form-check-label small" for="consentCheck">
+                                Я согласен на <a href="./privacy.html" target="_blank">обработку персональных данных</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            Отправить заявку
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="mb-3">
+                        <span style="font-weight: 800;">Ай</span><span style="font-weight: 300; opacity: 0.6;">Рус</span>
+                    </h3>
+                    <p style="opacity: 0.8; line-height: 1.8;">
+                        Профессиональные высотные работы в Челябинске с 2019 года.
+                    </p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-title">Услуги</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./cleaning/">Мойка окон</a></li>
+                        <li class="mb-2"><a href="./roof/">Очистка крыш</a></li>
+                        <li class="mb-2"><a href="./installation/">Монтаж</a></li>
+                        <li class="mb-2"><a href="./facade_works/">Фасадные работы</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-title">Компания</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#news">Новости</a></li>
+                        <li class="mb-2"><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Контакты</h5>
+                    <p style="opacity: 0.8;">
+                        <i class="fas fa-phone me-2"></i>+7 951 435-00-00<br>
+                        <i class="fas fa-envelope me-2"></i>info@airus-ural.ru
+                    </p>
+                </div>
+            </div>
+            <hr style="opacity: 0.2;">
+            <div class="text-center pt-3" style="opacity: 0.6;">
+                <small>© 2024 АйРус. Все права защищены.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Наши анимации -->
+    <script src="animations.js"></script>
+
+    <!-- Функции формы -->
+    <script>
+        function openForm(service) {
+            document.getElementById('bookingService').value = service;
+            populateZhkDropdown();
+            new bootstrap.Modal(document.getElementById('bookingModal')).show();
+        }
+
+        function populateZhkDropdown() {
+            const zhkList = ["Манхэттен", "Ньютон", "Подсолнухи", "Александровский", "Эвопарк", "Парковый премиум", "Ярославский", "Самоцветы", "Белый остров", "Король Плаза", "Вместе", "Слава", "Краснопольский", "Никс Сити", "Олимп", "Притяжение", "Шишкин"];
+            const sel = document.getElementById('zhkSelect');
+            if (sel.options.length > 1) return;
+            zhkList.forEach(z => { const o = document.createElement('option'); o.value = z; o.textContent = z; sel.appendChild(o); });
+            const other = document.createElement('option');
+            other.value = '__other__';
+            other.textContent = 'Другое (нет в списке)';
+            sel.appendChild(other);
+        }
+
+        function submitBooking(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
+            document.getElementById('bookingForm').reset();
+        }
+
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookies_accepted', '1');
+        }
+
+        // Check cookies on load
+        if (localStorage.getItem('cookies_accepted')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+
+
+    <!-- Dark redesign motion system -->
+    <script>
+    (function () {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const nav = document.getElementById('mainNav');
+
+        const updateNav = () => {
+            if (!nav) return;
+            nav.classList.toggle('nav-scrolled', window.scrollY > 24);
+        };
+        updateNav();
+        window.addEventListener('scroll', updateNav, { passive: true });
+
+        const revealTargets = document.querySelectorAll(
+            '#services .text-center.mb-5, #services .service-tabs, #services .tab-content, ' +
+            '#clients .text-center.mb-5, #clients .client-card, ' +
+            '#news .text-center.mb-5, #news .news-card, #news .text-center.mt-5, ' +
+            '#contact .col-lg-6, footer .row > div'
+        );
+
+        revealTargets.forEach((el, index) => {
+            el.classList.add('motion-reveal');
+            el.style.setProperty('--delay', ((index % 4) * 90) + 'ms');
+        });
+
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+            revealTargets.forEach(el => el.classList.add('is-visible'));
+        } else {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+            revealTargets.forEach(el => observer.observe(el));
+        }
+
+        if (!reduceMotion) {
+            document.querySelectorAll('.service-card, .news-card, .client-card').forEach(card => {
+                card.addEventListener('pointermove', (e) => {
+                    if (window.innerWidth < 992) return;
+                    const r = card.getBoundingClientRect();
+                    const x = (e.clientX - r.left) / r.width - 0.5;
+                    const y = (e.clientY - r.top) / r.height - 0.5;
+                    card.style.transform = `perspective(900px) rotateX(${(-y * 2.2).toFixed(2)}deg) rotateY(${(x * 2.2).toFixed(2)}deg) translateY(-5px)`;
+                });
+                card.addEventListener('pointerleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        }
+    })();
+    </script>
+
+</body>
+</html>
